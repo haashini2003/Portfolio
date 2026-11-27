@@ -1,453 +1,988 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gugashini Portfolio</title>
+    <meta charset="UTF-8">
 
-<link rel="stylesheet" href="style.css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Computer Networks Undergraduate passionate about Network Engineering, Cybersecurity and IT Infrastructure.">
+
+    <meta name="theme-color" content="#050b14">
+
+    <title>Gugashini | Network Engineering Portfolio</title>
+
+    <link rel="stylesheet" href="style.css?v=20261126">
+
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
+    <!-- ANIMATED NETWORK BACKGROUND -->
 
-  <h2>Portfolio</h2>
+    <canvas id="networkCanvas" aria-hidden="true"></canvas>
 
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#certificates">Certificates</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+    <div id="scroll-progress"></div>
 
-</nav>
 
-<!-- HERO -->
-<header class="hero">
+    <!-- NAVIGATION -->
 
-  <p class="status">🟢 Available for Work</p>
+    <nav>
 
-  <img src="assets/new-profile.jpeg"
-       alt="Gugashini Profile"
-       class="profile-img">
+        <h2 class="logo">GS.</h2>
 
-  <h1>Gugashini Sathyamoorthi</h1>
+        <ul id="nav-menu">
 
-  <h3>Network Engineer | Front End Developer</h3>
+            <li><a href="#home">Home</a></li>
 
-  <p class="hero-text">
-    Computer Networks undergraduate passionate about networking,
-    frontend development, and full-stack technologies.
-    Seeking internship opportunities to grow in the IT industry.
-  </p>
+            <li><a href="#about">About</a></li>
 
-  <!-- BUTTONS -->
-  <div class="buttons">
+            <li><a href="#education">Education</a></li>
 
-    <a href="#projects" class="btn1">
-      View Projects
-    </a>
+            <li><a href="#projects">Projects</a></li>
 
-    <a href="#contact" class="btn2">
-      Contact Me
-    </a>
+            <li><a href="#skills">Skills</a></li>
 
-  </div>
+            <li><a href="#certificates">Certificates</a></li>
 
-</header>
+            <li><a href="#contact">Contact</a></li>
 
-<!-- ABOUT -->
-<section id="about" class="hidden">
+        </ul>
 
-  <h2>About Me</h2>
+        <div class="nav-actions">
 
-  <div class="card">
+            <button id="theme-toggle"
+                    type="button"
+                    aria-label="Change theme">
+                ☀
+            </button>
 
-    <p>
-      I am a Computer Networks undergraduate with strong interest
-      in networking and full-stack development.
-      I enjoy building efficient and user-friendly applications
-      using modern technologies.
-    </p>
+            <button id="menu-toggle"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false">
+                ☰
+            </button>
 
-    <br>
+        </div>
 
-    <p>
-      I am currently improving my technical skills through
-      academic and personal projects while seeking internship
-      opportunities to apply my knowledge in real-world environments.
-    </p>
+    </nav>
 
-  </div>
 
-</section>
+    <!-- HERO SECTION -->
 
-<!-- EDUCATION -->
-<section id="education" class="hidden">
+    <header class="hero" id="home">
 
-  <h2>Education</h2>
+        <!-- SMALL CIRCULAR PROFILE PHOTO -->
 
-  <div class="grid">
+        <div class="hero-visual">
 
-    <div class="card">
-      <h3>BSc (Hons) Computer Networks</h3>
-      <p>NSBM Green University</p>
-      <p>2025 – Present</p>
-    </div>
+            <div class="orbit"></div>
 
-    <div class="card">
-      <h3>Diploma in Psychology</h3>
-      <p>ISTS (IVETA)</p>
-      <p>2023</p>
-    </div>
+            <div class="orbit orbit-two"></div>
 
-    <div class="card">
-      <h3>G.C.E Advanced Level</h3>
-      <p>B/ Passara Tamil Maha Vidyalayam</p>
-      <p>2022</p>
-    </div>
+            <div class="profile-container">
 
-  </div>
+                <img src="assets/new-profile.jpeg"
+                     alt="Gugashini Sathyamoorthi"
+                     class="profile-img"
+                     width="168"
+                     height="168">
 
-</section>
+            </div>
 
-<!-- PROJECTS -->
-<section id="projects" class="hidden">
+        </div>
 
-  <h2>Featured Projects</h2>
 
-  <div class="grid">
+        <!-- HERO CONTENT -->
 
-    <!-- PROJECT -->
-    <div class="card">
+        <div class="hero-content">
 
-      <h3>Wi-Fi Network Monitor</h3>
+            <p class="status">
 
-      <p>
-         Python-based Wi-Fi Network Monitoring tool that scans
-         available wirelesss networks and displays SSID,
-         signal strenght,channel, and security information.
-      </p>
+                ● AVAILABLE FOR INTERNSHIP — JANUARY 2027
 
-      <a href="https://github.com/haashini2003/wifi-network-monitor.git"
-         target="_blank"
-         class="project-btn">
-         View Project
-      </a>
+            </p>
 
-    </div>
-    
-    <!-- PROJECT -->
-    <div class="card">
+            <h1>Gugashini Sathyamoorthi</h1>
 
-      <h3>Enterprise Network VLAN Project</h3>
+            <h3>Computer Networks Undergraduate</h3>
 
-      <p>
-         Enterprise network designed using Cisco Packet Tracer
-         with multiple departments, VLANs, trunking, 
-         and inter-VLAN routing.
-      </p>
+            <h3 class="hero-subtitle">
 
-      <a href="https://github.com/haashini2003/enterprise-network-vlan-project.git"
-         target="_blank"
-         class="project-btn">
-         View Project
-      </a>
+                Network Engineering · Cybersecurity · IT Infrastructure
 
-    </div>
+            </h3>
 
-    <!-- PROJECT -->
-    <div class="card">
+            <p class="hero-text">
 
-      <h3>Stall Booking System</h3>
+                Computer Networks Undergraduate passionate about
+                network engineering, cybersecurity, IT infrastructure,
+                and emerging networking technologies.
 
-      <p>
-        Secure stall booking platform with authentication,
-        role-based access, booking management,
-        and responsive user interface.
-      </p>
+                Seeking internship opportunities to gain practical
+                industry experience.
 
-      <a href="https://github.com/haashini2003/StallBookingSystem.git"
-         target="_blank"
-         class="project-btn">
-         View Project
-      </a>
+            </p>
 
-    </div>
+            <div class="buttons">
 
-    <!-- PROJECT -->
-    <div class="card">
+                <a href="#projects" class="btn1">
 
-      <h3>Campus Connect Lost & Found</h3>
+                    Explore Projects ↗
 
-      <p>
-        Smart lost & found management system developed using
-        Java, Spring Boot, H2 Database, and Thymeleaf.
-      </p>
+                </a>
 
-      <a href="https://github.com/"
-         target="_blank"
-         class="project-btn">
-         View Project
-      </a>
+                <a href="assets/gugashini_CV.pdf"
+                   class="btn2"
+                   target="_blank"
+                   rel="noopener">
+
+                    View CV
+
+                </a>
+
+                <a href="#contact" class="btn2">
+
+                    Contact Me
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ANIMATED TECHNOLOGY STRIP -->
+
+    <div class="marquee">
+
+        <div class="marquee-track">
+
+            <div class="marquee-group">
+
+                <span>◆ NETWORK ENGINEERING</span>
+
+                <span>◆ CYBERSECURITY</span>
+
+                <span>◆ IT INFRASTRUCTURE</span>
+
+                <span>◆ ROUTING & SWITCHING</span>
+
+                <span>◆ IoT TECHNOLOGIES</span>
+
+                <span>◆ NETWORK MONITORING</span>
+
+            </div>
+
+            <div class="marquee-group" aria-hidden="true">
+
+                <span>◆ NETWORK ENGINEERING</span>
+
+                <span>◆ CYBERSECURITY</span>
+
+                <span>◆ IT INFRASTRUCTURE</span>
+
+                <span>◆ ROUTING & SWITCHING</span>
+
+                <span>◆ IoT TECHNOLOGIES</span>
+
+                <span>◆ NETWORK MONITORING</span>
+
+            </div>
+
+        </div>
 
     </div>
 
-    <!-- PROJECT -->
-    <div class="card">
 
-      <h3>StudentHub</h3>
+    <main>
 
-      <p>
-        Student management platform for academic resources,
-        announcements, dashboard management,
-        and notifications.
-      </p>
+        <!-- ABOUT SECTION -->
 
-      <a href="https://github.com/haashini2003/studenthub.git"
-         target="_blank"
-         class="project-btn">
-         View Project
-      </a>
+        <section id="about" class="hidden">
 
-    </div>
+            <span class="section-label">
 
-    <!-- PROJECT -->
-    <div class="card">
+                01 / GET TO KNOW ME
 
-      <h3>Navora Food Mapping</h3>
+            </span>
 
-      <p>
-        Full-stack travel and food mapping system using
-        Java Spring Boot, MySQL, and JavaScript
-        with location filtering.
-      </p>
+            <h2>About Me</h2>
 
-      <a href="https://github.com/haashini2003/Navora-Food-Mapping.git"
-         target="_blank"
-         class="project-btn">
-         View Project
-      </a>
+            <div class="card">
 
-    </div>
+                <p>
 
-  
-  </div>
+                    I am a third-year Computer Networks undergraduate
+                    at NSBM Green University with a strong interest
+                    in network engineering, cybersecurity,
+                    and IT infrastructure.
 
-</section>
+                </p>
 
-<!-- SKILLS -->
-<section id="skills" class="hidden">
+                <br>
 
-  <h2>Technical Skills</h2>
+                <p>
 
-  <div class="grid">
+                    I enjoy designing networks, troubleshooting
+                    connectivity issues, monitoring network performance,
+                    and exploring IoT technologies through academic
+                    and personal projects.
 
-    <div class="card">
-      Networking (LAN, WAN, TCP/IP)
-    </div>
+                </p>
 
-    <div class="card">
-      Routers & Switches Basics
-    </div>
+                <br>
 
-    <div class="card">
-      Java / JavaScript / Python
-    </div>
+                <p>
 
-    <div class="card">
-      React / Node.js / Express
-    </div>
+                    I am seeking an internship opportunity to apply
+                    my technical knowledge, develop practical skills,
+                    and grow as a networking professional.
 
-    <div class="card">
-      Spring Boot / REST API
-    </div>
+                </p>
 
-    <div class="card">
-      MongoDB / MySQL
-    </div>
+            </div>
 
-    <div class="card">
-      GitHub / Postman / IntelliJ
-    </div>
+        </section>
 
-    <div class="card">
-      JWT Authentication / Axios API
-    </div>
 
-  </div>
+        <!-- EDUCATION TIMELINE -->
 
-</section>
+        <section id="education" class="hidden">
 
-<!-- CERTIFICATES -->
-<section id="certificates" class="hidden">
+            <span class="section-label">
 
-  <h2>Certificates & Awards</h2>
+                02 / ACADEMIC JOURNEY
 
-  <div class="grid">
+            </span>
 
-    <div class="card">
+            <h2>Education</h2>
 
-      <h3>Introduction to C</h3>
+            <div class="grid">
 
-      <p>Sololearn</p>
+                <div class="card">
 
-      <a href="assets/certificate2.jpeg"
-         target="_blank"
-         class="project-btn">
-         View Certificate
-      </a>
+                    <h3>BSc (Hons) Computer Networks</h3>
 
-    </div>
+                    <p>NSBM Green University</p>
 
-    <div class="card">
+                    <p>2025 – Present</p>
 
-      <h3>Networking Basics</h3>
+                </div>
 
-      <p>Cisco Networking Academy</p>
+                <div class="card">
 
-      <a href="assets/certificate1.pdf"
-         target="_blank"
-         class="project-btn">
-         View Certificate
-      </a>
+                    <h3>Diploma in Psychology</h3>
 
+                    <p>ISTS (IVETA)</p>
 
-    </div>
+                    <p>2023</p>
 
-    <div class="card">
+                </div>
 
-      <h3>Career Preparation Workshop</h3>
+                <div class="card">
 
-      <p>Participant Award</p>
-      <a href="https://www.credly.com/badges/0e8d0282-1cc0-46f6-9d56-597427bb3560"
-          target="blank"
-          class="project-btn">
-          view certificate</a>
+                    <h3>G.C.E. Advanced Level</h3>
 
-    </div>
+                    <p>B/ Passara Tamil Maha Vidyalayam</p>
 
-  </div>
+                    <p>2022</p>
 
-</section>
+                </div>
 
-<!-- LANGUAGES -->
-<section class="hidden">
+            </div>
 
-  <h2>Languages</h2>
+        </section>
 
-  <div class="grid">
 
-    <div class="card">Tamil</div>
-    <div class="card">English</div>
-    <div class="card">Sinhala</div>
+        <!-- PROJECTS SECTION -->
 
-  </div>
+        <section id="projects" class="hidden">
 
-</section>
+            <span class="section-label">
 
-<!-- EXTRACURRICULAR -->
-<section class="hidden">
+                03 / MY PRACTICAL EXPERIENCE
 
-  <h2>Extra-Curricular Activities</h2>
+            </span>
 
-  <div class="grid">
+            <h2>Featured Projects</h2>
 
-    <div class="card">
-      Essay writing, poem writing,
-      and story writing competitions.
-    </div>
 
-    <div class="card">
-      Literary and cultural programs.
-    </div>
+            <!-- PROJECT FILTER BUTTONS -->
 
-    <div class="card">
-      Sports activities and achievements.
-    </div>
+            <div class="project-filters">
 
-  </div>
+                <button class="filter-btn active"
+                        type="button"
+                        data-filter="all"
+                        aria-pressed="true">
 
-</section>
+                    All Projects
 
-<!-- CONTACT -->
-<section id="contact" class="hidden">
+                </button>
 
-  <h2>Get In Touch</h2>
+                <button class="filter-btn"
+                        type="button"
+                        data-filter="network"
+                        aria-pressed="false">
 
-  <p class="contact-text">
-    I am currently seeking internship opportunities and
-    real-world project experience.
-    Feel free to contact me anytime.
-  </p>
+                    Networking
 
-  <!-- CONTACT FORM -->
-  <div class="contact-form">
+                </button>
 
-    <input type="text"
-           placeholder="Your Name">
+                <button class="filter-btn"
+                        type="button"
+                        data-filter="iot"
+                        aria-pressed="false">
 
-    <input type="email"
-           placeholder="Your Email">
+                    IoT
 
-    <textarea placeholder="Your Message"></textarea>
+                </button>
 
-    <button class="send-btn">
-      ✈ Send Message
-    </button>
+                <button class="filter-btn"
+                        type="button"
+                        data-filter="software"
+                        aria-pressed="false">
 
-  </div>
+                    Software
 
-  <!-- CONTACT LINKS -->
-  <div class="contact-links">
+                </button>
 
-    <a href="mailto:aashihashini111@gmail.com">
-      📧 Email
-    </a>
+            </div>
 
-    <a href="tel:+94741648587">
-      📞 Phone
-    </a>
 
-    <a href="https://github.com/haashini2003"
-       target="_blank">
-       💻 GitHub
-    </a>
+            <div class="grid projects-grid">
 
-    <a href="https://linkedin.com/in/aashi11"
-       target="_blank">
-       🔗 LinkedIn
-    </a>
 
-    
-    <!-- VIEW CV -->
-    <a href="assets/gugashini_CV.pdf"
-       target="_blank">
-       📄 View CV
-    </a>
+                <!-- PROJECT 01 -->
 
-    <!-- DOWNLOAD CV -->
-    <a href="assets/gugashini_CV.pdf"
-       download>
-       ⬇ Download CV
-    </a>
+                <article class="card project-card"
+                         data-category="network iot">
 
-  </div>
+                    <h3>
 
-</section>
+                        NetWatch – Smart Home IoT Monitoring
+                        &amp; Control System
 
-<!-- FOOTER -->
-<footer>
-  © 2026 Gugashini Portfolio
-</footer>
+                    </h3>
 
-<script src="app.js"></script>
+                    <p>
+
+                        Smart home IoT network designed using Cisco
+                        Packet Tracer with a real-time network
+                        monitoring dashboard. Mobile-based device
+                        control, automation, and alerts are currently
+                        in development.
+
+                    </p>
+
+                    <p class="technology">
+
+                        Python · Flask · Cisco Packet Tracer · IoT · SQLite
+
+                    </p>
+
+                    <a href="https://haashini2003.github.io/NetWatch-Smart-Home-IoT/"
+                       class="project-btn"
+                       target="_blank"
+                       rel="noopener">
+
+                        View Project ↗
+
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 02 -->
+
+                <article class="card project-card"
+                         data-category="network">
+
+                    <h3>Wi-Fi Network Monitor</h3>
+
+                    <p>
+
+                        Python-based wireless network monitoring
+                        application with signal strength analysis,
+                        security classification, search, filtering,
+                        and automatic network refreshing.
+
+                    </p>
+
+                    <p class="technology">
+
+                        Python · Tkinter · Wireless Networking
+
+                    </p>
+
+                    <a href="https://github.com/haashini2003/wifi-network-monitor.git"
+                       class="project-btn"
+                       target="_blank"
+                       rel="noopener">
+
+                        View GitHub ↗
+
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 03 -->
+
+                <article class="card project-card"
+                         data-category="network">
+
+                    <h3>Enterprise Network VLAN Project</h3>
+
+                    <p>
+
+                        Enterprise network designed using Cisco
+                        Packet Tracer with multiple departments,
+                        VLAN segmentation, trunking, inter-VLAN
+                        routing, DHCP, and basic ACLs.
+
+                    </p>
+
+                    <p class="technology">
+
+                        Cisco Packet Tracer · VLANs · Routing &amp; Switching
+
+                    </p>
+
+                    <a href="https://github.com/haashini2003/enterprise-network-vlan-project.git"
+                       class="project-btn"
+                       target="_blank"
+                       rel="noopener">
+
+                        View GitHub ↗
+
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 04 -->
+
+                <article class="card project-card"
+                         data-category="software">
+
+                    <h3>Campus Connect Lost &amp; Found System</h3>
+
+                    <p>
+
+                        Web-based campus lost and found management
+                        system with smart matching, priority ranking,
+                        and claim validation features.
+
+                    </p>
+
+                    <p class="technology">
+
+                        Java · Spring Boot · H2 Database · Thymeleaf
+
+                    </p>
+
+                    <a href="https://github.com/dhanu2004847-ux/ignite.git"
+                       class="project-btn"
+                       target="_blank"
+                       rel="noopener">
+
+                        View GitHub ↗
+
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 05 -->
+
+                <article class="card project-card"
+                         data-category="software">
+
+                    <h3>StudentHub</h3>
+
+                    <p>
+
+                        Student management platform designed to
+                        centralize academic resources, announcements,
+                        student activities, and notifications
+                        through an interactive dashboard.
+
+                    </p>
+
+                    <a href="https://github.com/haashini2003/studenthub.git"
+                       class="project-btn"
+                       target="_blank"
+                       rel="noopener">
+
+                        View GitHub ↗
+
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 06 -->
+
+                <article class="card project-card"
+                         data-category="software">
+
+                    <h3>Navora Food Mapping</h3>
+
+                    <p>
+
+                        Full-stack food and travel mapping platform
+                        with location-based search, category filtering,
+                        REST APIs, and an interactive user interface.
+
+                    </p>
+
+                    <p class="technology">
+
+                        Java · Spring Boot · MySQL · JavaScript
+
+                    </p>
+
+                    <a href="https://github.com/haashini2003/Navora-Food-Mapping.git"
+                       class="project-btn"
+                       target="_blank"
+                       rel="noopener">
+
+                        View GitHub ↗
+
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- TECHNICAL SKILLS -->
+
+        <section id="skills" class="hidden">
+
+            <span class="section-label">
+
+                04 / MY TECHNICAL TOOLKIT
+
+            </span>
+
+            <h2>Technical Skills</h2>
+
+            <div class="grid">
+
+                <div class="card">
+                    Networking (LAN, WAN, TCP/IP)
+                </div>
+
+                <div class="card">
+                    Routing &amp; Switching
+                </div>
+
+                <div class="card">
+                    VLANs, Trunking &amp; Inter-VLAN Routing
+                </div>
+
+                <div class="card">
+                    IP Addressing &amp; Subnetting
+                </div>
+
+                <div class="card">
+                    DNS, DHCP &amp; Network Protocols
+                </div>
+
+                <div class="card">
+                    Cisco Packet Tracer
+                </div>
+
+                <div class="card">
+                    Wireshark &amp; Packet Analysis
+                </div>
+
+                <div class="card">
+                    Network Monitoring &amp; Troubleshooting
+                </div>
+
+                <div class="card">
+                    Cybersecurity Fundamentals
+                </div>
+
+                <div class="card">
+                    Wireless Networking &amp; IoT
+                </div>
+
+                <div class="card">
+                    Linux &amp; Windows Fundamentals
+                </div>
+
+                <div class="card">
+                    Python &amp; Network Programming
+                </div>
+
+                <div class="card">
+                    Git &amp; GitHub
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CERTIFICATES -->
+
+        <section id="certificates" class="hidden">
+
+            <span class="section-label">
+
+                05 / CONTINUOUS LEARNING
+
+            </span>
+
+            <h2>Certificates &amp; Awards</h2>
+
+            <div class="grid">
+
+
+                <!-- CERTIFICATE 01 -->
+
+                <div class="card">
+
+                    <span class="card-icon">◇</span>
+
+                    <h3>Introduction to C</h3>
+
+                    <p>Sololearn</p>
+
+                    <a href="assets/certificate2.jpeg"
+                       class="project-btn"
+                       target="_blank"
+                       rel="noopener">
+
+                        View Certificate ↗
+
+                    </a>
+
+                </div>
+
+
+                <!-- CERTIFICATE 02 -->
+
+                <div class="card">
+
+                    <span class="card-icon">◇</span>
+
+                    <h3>Networking Basics</h3>
+
+                    <p>Cisco Networking Academy</p>
+
+                    <a href="assets/certificate1.pdf"
+                       class="project-btn"
+                       target="_blank"
+                       rel="noopener">
+
+                        View Certificate ↗
+
+                    </a>
+
+                </div>
+
+
+                <!-- CERTIFICATE 03 -->
+
+                <div class="card">
+
+                    <span class="card-icon">◇</span>
+
+                    <h3>Career Preparation Workshop</h3>
+
+                    <p>Participant Award</p>
+
+                    <a href="https://www.credly.com/badges/0e8d0282-1cc0-46f6-9d56-597427bb3560"
+                       class="project-btn"
+                       target="_blank"
+                       rel="noopener">
+
+                        View Badge ↗
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LANGUAGES -->
+
+        <section id="languages" class="hidden">
+
+            <span class="section-label">
+
+                06 / COMMUNICATION
+
+            </span>
+
+            <h2>Languages</h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>Tamil</h3>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>English</h3>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Sinhala</h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXTRA-CURRICULAR ACTIVITIES -->
+
+        <section id="activities" class="hidden">
+
+            <span class="section-label">
+
+                07 / BEYOND ACADEMICS
+
+            </span>
+
+            <h2>Extra-Curricular Activities</h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <span class="card-icon">✎</span>
+
+                    <h3>Creative Writing</h3>
+
+                    <p>
+
+                        Essay writing, poem writing,
+                        and story writing competitions.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <span class="card-icon">✧</span>
+
+                    <h3>Literary &amp; Cultural Activities</h3>
+
+                    <p>
+
+                        Participation in literary
+                        and cultural programs.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <span class="card-icon">☆</span>
+
+                    <h3>Sports Activities</h3>
+
+                    <p>
+
+                        Participation in sports activities
+                        and achievements.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT SECTION -->
+
+        <section id="contact" class="hidden">
+
+            <span class="section-label">
+
+                08 / LET'S CONNECT
+
+            </span>
+
+            <h2>Get In Touch</h2>
+
+            <p class="contact-text">
+
+                I am currently seeking internship opportunities
+                and real-world project experience.
+                Feel free to contact me anytime.
+
+            </p>
+
+            <div class="contact-grid">
+
+
+                <!-- CONTACT FORM -->
+
+                <form id="contact-form"
+                      class="contact-form">
+
+                    <h3>Send a Message</h3>
+
+                    <label for="name">Your Name</label>
+
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           placeholder="Enter your name"
+                           required>
+
+                    <label for="email">Your Email</label>
+
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="Enter your email"
+                           required>
+
+                    <label for="message">Your Message</label>
+
+                    <textarea id="message"
+                              name="message"
+                              placeholder="Write your message here..."
+                              required></textarea>
+
+                    <button type="submit" class="send-btn">
+
+                        Send Message ↗
+
+                    </button>
+
+                    <p id="form-status"
+                       aria-live="polite"></p>
+
+                </form>
+
+
+                <!-- CONTACT LINKS -->
+
+                <div class="contact-links">
+
+                    <a href="mailto:aashihashini111@gmail.com">
+
+                        <span>Email</span>
+
+                        <span>↗</span>
+
+                    </a>
+
+                    <a href="tel:+94741648587">
+
+                        <span>Phone</span>
+
+                        <span>↗</span>
+
+                    </a>
+
+                    <a href="https://github.com/haashini2003"
+                       target="_blank"
+                       rel="noopener">
+
+                        <span>GitHub</span>
+
+                        <span>↗</span>
+
+                    </a>
+
+                    <a href="https://linkedin.com/in/aashi11"
+                       target="_blank"
+                       rel="noopener">
+
+                        <span>LinkedIn</span>
+
+                        <span>↗</span>
+
+                    </a>
+
+                    <a href="assets/gugashini_CV.pdf"
+                       target="_blank"
+                       rel="noopener">
+
+                        <span>View Resume</span>
+
+                        <span>↗</span>
+
+                    </a>
+
+                    <a href="assets/gugashini_CV.pdf"
+                       download>
+
+                        <span>Download Resume</span>
+
+                        <span>↓</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Gugashini Sathyamoorthi.
+            All Rights Reserved.
+
+        </p>
+
+        <p>
+
+            Computer Networks Undergraduate
+
+            <a href="#home">Back to Top ↑</a>
+
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="app.js?v=20261126"></script>
 
 </body>
+
 </html>
